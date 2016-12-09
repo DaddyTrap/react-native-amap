@@ -37,7 +37,7 @@ allprojects {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:23.1.0'
-    compile files('libs/AMap_2DMap_V2.8.1_20160202.jar')
     compile files('libs/AMap_Search_V3.2.1_20160308.jar')
+    compile files('libs/Amap_2DMap_V2.9.2_20161026.jar')
     compile 'com.facebook.react:react-native:+'
 }

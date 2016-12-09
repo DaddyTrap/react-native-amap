@@ -33,12 +33,14 @@ public class AMapPackage implements ReactPackage {
         AMapPolylineManager polylineManager = new AMapPolylineManager(reactContext);
         AMapPolygonManager polygonManager = new AMapPolygonManager(reactContext);
         AMapCircleManager circleManager = new AMapCircleManager(reactContext);
+        AMapGroundOverlayManager groundOverlayManager = new AMapGroundOverlayManager();
 
         AMapViewManager mapManager = new AMapViewManager(
                 annotationManager,
                 polylineManager,
                 polygonManager,
-                circleManager
+                circleManager,
+                groundOverlayManager
         );
 
         return Arrays.<ViewManager>asList(
@@ -47,7 +49,8 @@ public class AMapPackage implements ReactPackage {
                 polylineManager,
                 polygonManager,
                 circleManager,
-                mapManager
+                mapManager,
+                groundOverlayManager
         );
     }
 
