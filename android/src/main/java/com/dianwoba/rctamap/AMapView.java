@@ -61,6 +61,7 @@ public class AMapView extends MapView implements AMap.InfoWindowAdapter,
     private final Map<Polyline, AMapPolyline> polylineMap = new HashMap<>();
     private final Map<Polygon, AMapPolygon> polygonMap = new HashMap<>();
     private final Map<Circle, AMapCircle> circleMap = new HashMap<>();
+    private final Map<GroundOverlay, AMapGroundOverlay> overlayMap = new HashMap<>();
 
     private final ScaleGestureDetector scaleDetector;
     private final GestureDetectorCompat gestureDetector;
@@ -365,6 +366,12 @@ public class AMapView extends MapView implements AMap.InfoWindowAdapter,
             features.add(index, circleView);
             Circle circle = (Circle) circleView.getFeature();
             circleMap.put(circle, circleView);
+        } else if (child instanceof AMapGroundOverlay) {
+            AMapGroundOverlay overlay = (AMapGroundOverlay) child;
+            overlay.addToMap(map);
+            features.add(index, overlay);
+            GroundOverlay marker = (GroundOverlay) overlay.getFeature();
+            overlayMap.put(marker, overlay);
         } else {
             // TODO(lmr): throw? User shouldn't be adding non-feature children.
         }

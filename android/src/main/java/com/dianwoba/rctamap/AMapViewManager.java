@@ -48,16 +48,19 @@ public class AMapViewManager extends ViewGroupManager<AMapView> {
     private AMapPolylineManager polylineManager;
     private AMapPolygonManager polygonManager;
     private AMapCircleManager circleManager;
+    private AMapGroundOverlayManager groundOverlayManager;
 
     public AMapViewManager(
             AMapMarkerManager markerManager,
             AMapPolylineManager polylineManager,
             AMapPolygonManager polygonManager,
-            AMapCircleManager circleManager) {
+            AMapCircleManager circleManager,
+            AMapGroundOverlayManager groundOverlayManager) {
         this.markerManager = markerManager;
         this.polylineManager = polylineManager;
         this.polygonManager = polygonManager;
         this.circleManager = circleManager;
+        this.groundOverlayManager = groundOverlayManager;
     }
 
     @Override
