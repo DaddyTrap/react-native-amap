@@ -20,6 +20,7 @@ import com.amap.api.maps2d.MapView;
 import com.amap.api.maps2d.Projection;
 import com.amap.api.maps2d.model.CameraPosition;
 import com.amap.api.maps2d.model.Circle;
+import com.amap.api.maps2d.model.GroundOverlay;
 import com.amap.api.maps2d.model.LatLng;
 import com.amap.api.maps2d.model.LatLngBounds;
 import com.amap.api.maps2d.model.Marker;
